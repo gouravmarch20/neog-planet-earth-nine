@@ -72,40 +72,71 @@ const data = {
 }
 
 const App = () => {
-  const [cityName, setCityName] = useState(data.Mountain)
+  const [cityName, setCityName] = useState(data.Forest)
   const handleCityName = city => {
     setCityName(data[city])
   }
   return (
-    <div className='container'>
-      <h1 className="heading-one">Planet Earth</h1>
-      <h3>World's most inspiring natural Wonders</h3>
+    <>
+      <header className='hero'>
+        <h1 className='hero-heading'>Planet Earth</h1>
+        <h3 className='hero-heading'>World's most inspiring natural Wonders</h3>
+      </header>
 
-      {Object.keys(data).map(city => {
-        return (
-          <button
-            key={city}
-            onClick={() => {
-              handleCityName(city)
-            }}
-          >
-            {city}
-          </button>
-        )
-      })}
-      <ul>
-        {cityName.map(city => {
-          return (
-            <li key={city.title}>
-              <div className='img-container'>
-                <img src={city.image} alt='img' className='city-image' />
+      <section>
+        <div className='container container-center section-center'>
+          {Object.keys(data).map(city => {
+            return (
+              <div className='container btn-center'>
+                <button
+                  className='earth-btn '
+                  key={city}
+                  onClick={() => {
+                    handleCityName(city)
+                  }}
+                >
+                 {city}
+                </button>
               </div>
-              <h1 className='heading-one'>{city.name}</h1>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+            )
+          })}
+        </div>
+        <ul>
+          {cityName.map(city => {
+            return (
+              <li key={city.title}>
+                <div className='img-container'>
+                  <img src={city.image} alt='img' className='city-image' />
+                </div>
+               <h1 className="earth-location">{city.name}</h1>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+
+      <footer>
+        <p>
+          Developed by
+          <a href='https://www.trixoon.com/' target='_blank'>
+            Gourav
+          </a>
+        </p>
+        <a href='https://www.instagram.com/gouravmarch20/'>
+          {' '}
+          <i class='fab fa-instagram' target='_blank'></i>
+        </a>
+        <a href='https://github.com/gouravmarch20/'>
+          {' '}
+          <i class='fab fa-github-square ' target='_blank'></i>
+        </a>
+
+        <a href='https://www.linkedin.com/in/gouravmarch20/' target='_blank'>
+          {' '}
+          <i class='fab fa-linkedin-in'></i>
+        </a>
+      </footer>
+    </>
   )
 }
 

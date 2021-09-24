@@ -2,24 +2,31 @@
   --danger-color: #ff6263;
   --sucess-color: #1c8d73;
   --info-color: #207398;
-  --red-color : red;
-}
+  --red-color: red;
+  --color-dark: #03203c;
+  --color-sucess: #02b290;
+  --color-vibrant: #e07c24;
 
+  --color-yellow: #e5d68a;
+}
 
 * {
   margin: 0;
   padding: 0;
-
 }
 body {
-  background-color: var(--danger-color);
-}
-.container {
-  width: 100%;
+  background-color: var(--color-vibrant);
+  color: var(--color-dark);
 }
 
 ul {
   list-style-type: none;
+}
+.hero {
+  text-align: center;
+}
+.hero-heading {
+  margin-top: 0.5rem;
 }
 .city-image {
   display: flex;
@@ -29,23 +36,61 @@ ul {
 
   height: 35vh;
 }
-
-button {
-  background-color: var(--sucess-color);
-
-  padding: 0 1rem;
-  margin: 0.6rem;
+/* section  */
+.section {
+  padding: 0rem 1.5rem;
+}
+.container {
+}
+.container-center {
+  max-width: 450px;
+  background-color: var(--color-yellow);
+  padding: 1rem;
   border-radius: 1rem;
-  border-color: blueviolet;
+
+  margin: 0 auto;
 }
-.heading-one {
+.section-center {
+  margin: 2rem auto;
+}
+.container p {
   text-align: center;
-  color: var(--sucess-color);
+  /* margin-bottom: 1rem; */
 }
-h3 {
+button {
+  background-color: var(--color-sucess);
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+.btn-center {
+  padding: 0.3rem;
+  margin: 0.2rem 0rem;
+  display: inline !important;
+}
+.earth-location {
+  color: white;
   text-align: center;
-  color: var(--info-color);
+  margin-bottom: 0.6rem;
 }
-h3 {
-  color: var(--info-color);
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 3rem;
+}
+footer p {
+  text-align: center;
+  font-size: large;
+  margin-top: 1rem;
+}
+footer a {
+  text-align: center;
+}
+i {
+  text-align: center;
+  margin-top: 0.9rem;
+  font-size: 1.7rem;
+  margin-left: 1rem;
+  color: #03203c;
 }

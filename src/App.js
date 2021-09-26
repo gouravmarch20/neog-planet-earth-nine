@@ -1,71 +1,95 @@
 import React, { useState } from 'react'
 import './App.css'
+import Footer from './Footer'
 const data = {
   Forest: [
     {
       name: 'alpah fortest',
+      rating: 'rating : 5',
+
       palace: 'delli',
       image: './images/forest-one.jpg'
     },
     {
       name: 'zeron gate',
-      palace: 'new delhi',
+      rating: 'rating : 3',
+
+      palace: 'zeron',
       image: './images/forest-two.jpg'
     },
     {
       name: 'musk bian',
-      palace: 'delhi',
+      palace: 'eitger',
+      rating: 'rating : 2',
+
       image: './images/forest-three.jpg'
     }
   ],
   Mountain: [
     {
-      name: 'Hanging cloutdinga',
-      palace: 'mumbai',
+      name: 'cloutdinga',
+      palace: ' itel mbai',
+      rating: 'rating : 5',
       image: './images/mount-one.jpg'
     },
     {
       name: 'marine peak ',
       palace: 'navi  mumbai',
+      rating: 'rating : 3',
+
       image: './images/mount-two.jpg'
     },
     {
       name: 'pateian jikara',
-      palace: 'bombay',
+      palace: 'xg-mbay',
+      rating: 'rating : 0',
+
       image: './images/mount-three.jpg'
     }
   ],
   Ocean: [
     {
-      name: 'Hanging Gardens',
+      name: 'Hanging ocian',
       palace: 'mumbai',
+      rating: 'rating : 4',
+
       image: './images/sea-one.jpg'
     },
     {
       name: 'indianna beach ',
       palace: 'navi  mumbai',
+      rating: 'rating : 5',
+
       image: './images/sea-two.jpg'
     },
     {
       name: 'Jelly Caves',
       palace: 'bombay',
+      rating: 'rating : 5',
+
       image: './images/sea-three.jpg'
     }
   ],
   Desert: [
     {
       name: 'Stone age ',
-      palace: 'mumbai',
+      palace: 'rajasthan',
+      rating: 'rating : 3',
+
       image: './images/desert-one.jpg'
     },
     {
-      name: 'marine beach ',
-      palace: 'Road desert',
+      name: 'maxrrine beaoinch ',
+      palace: 'Roaxard desert',
+      rating: 'rating : 5',
+
       image: './images/desert-two.jpg'
     },
     {
       name: 'Light power',
-      palace: 'bombay',
+      palace: 'poblia dixon',
+      rating: 'rating : 5',
+
       image: './images/desert-three.jpg'
     }
   ]
@@ -95,7 +119,7 @@ const App = () => {
                     handleCityName(city)
                   }}
                 >
-                 {city}
+                  {city}
                 </button>
               </div>
             )
@@ -108,34 +132,16 @@ const App = () => {
                 <div className='img-container'>
                   <img src={city.image} alt='img' className='city-image' />
                 </div>
-               <h1 className="earth-location">{city.name}</h1>
+                <p className='earth-location'>{city.name}</p>
+                <p className='earth-location'>{city.palace}</p>
+                <p className='earth-location'>{city.rating}</p>
               </li>
             )
           })}
         </ul>
       </section>
-
-      <footer>
-        <p>
-          Developed by
-          <a href='https://www.trixoon.com/' target='_blank'>
-            Gourav
-          </a>
-        </p>
-        <a href='https://www.instagram.com/gouravmarch20/'>
-          {' '}
-          <i class='fab fa-instagram' target='_blank'></i>
-        </a>
-        <a href='https://github.com/gouravmarch20/'>
-          {' '}
-          <i class='fab fa-github-square ' target='_blank'></i>
-        </a>
-
-        <a href='https://www.linkedin.com/in/gouravmarch20/' target='_blank'>
-          {' '}
-          <i class='fab fa-linkedin-in'></i>
-        </a>
-      </footer>
+      <hr style={{ color: 'red' }} />
+      <Footer />
     </>
   )
 }

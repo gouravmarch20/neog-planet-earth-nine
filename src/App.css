@@ -1,10 +1,9 @@
 :root {
   --danger-color: #ff6263;
-  --sucess-color: #1c8d73;
   --info-color: #207398;
   --red-color: red;
-  --color-dark: #03203c;
-  --color-sucess: #02b290;
+  --color-dark: #51ff0d;
+  --color-sucess: #03203c;
   --color-vibrant: #e07c24;
 
   --color-yellow: #e5d68a;
@@ -15,26 +14,35 @@
   padding: 0;
 }
 body {
-  background-color: var(--color-vibrant);
+  background-color: #03203C;
   color: var(--color-dark);
 }
 
 ul {
   list-style-type: none;
 }
-.hero {
+a {
+  color: var(--color-dark);
+}
+
+/* header */
+
+.hero{
+  height: 10vh;
+  background-color: var(--color-sucess);
   text-align: center;
+  color: var(--color-dark);
+  font-weight: bolder;
 }
-.hero-heading {
-  margin-top: 0.5rem;
-}
+
+/* image */
 .city-image {
   display: flex;
   margin: 0 auto;
   object-fit: cover;
-  width: 40%;
+  width: 30%;
 
-  height: 35vh;
+  height: 15vh;
 }
 /* section  */
 .section {
@@ -48,17 +56,15 @@ ul {
   padding: 1rem;
   border-radius: 1rem;
 
-  margin: 0 auto;
 }
 .section-center {
   margin: 2rem auto;
 }
-.container p {
-  text-align: center;
-  /* margin-bottom: 1rem; */
-}
+
 button {
-  background-color: var(--color-sucess);
+  background-color: #758283;
+  color: var(--color-dark);
+
   padding: 0.3rem;
   border-radius: 1rem;
 }
@@ -68,29 +74,32 @@ button {
   display: inline !important;
 }
 .earth-location {
-  color: white;
+  color: #FFFF00;
   text-align: center;
   margin-bottom: 0.6rem;
 }
 /* footer */
-footer {
-  display: flex;
-  justify-content: center;
+.list-item-inline {
+  display: inline;
+  margin: 0 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
 
-  margin-top: 3rem;
-}
-footer p {
+footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
   text-align: center;
-  font-size: large;
-  margin-top: 1rem;
-}
-footer a {
+  background-color: var(--color-sucess);
+
   text-align: center;
+  padding: 0.3rem 0rem;
+  margin-bottom: 0.1rem;
 }
-i {
-  text-align: center;
-  margin-top: 0.9rem;
-  font-size: 1.7rem;
-  margin-left: 1rem;
-  color: #03203c;
+.footer-header {
+  margin-bottom: 1rem;
+  font-size: larger;
 }

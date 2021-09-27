@@ -60,7 +60,9 @@ a {
 .section-center {
   margin: 2rem auto;
 }
-
+.hero-heading{
+  margin-top: 1rem;
+}
 button {
   background-color: #758283;
   color: var(--color-dark);

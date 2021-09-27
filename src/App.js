@@ -56,7 +56,7 @@ const data = {
       image: './images/sea-one.jpg'
     },
     {
-      name: 'indianna beach ',
+      name: 'indianna rger ',
       palace: 'navi  mumbai',
       rating: 'rating : 5',
 
@@ -72,7 +72,7 @@ const data = {
   ],
   Desert: [
     {
-      name: 'Stone age ',
+      name: 'Stoner ege ',
       palace: 'rajasthan',
       rating: 'rating : 3',
 
